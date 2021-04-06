@@ -1,0 +1,93 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+
+
+
+html {
+  box-sizing: border-box;
+  font-size: .75rem;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  width: 400px;
+  border-radius:3px;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  &-header {
+      width: 100%;
+      display: block;
+  }
+
+  &-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid rgba(153, 153, 153, 0.383);
+
+      &-img {
+          margin-top: calc(-48px - 5px);
+          background-color: white;
+          padding: 5px;
+          width: 300px;
+          height: 300px;
+      }
+
+      &-title {
+          margin-top: 2rem;
+          font-size: 1.8rem;
+
+          span {
+              color: var(--dark-gray);
+              font-weight: 400;
+          }
+      }
+
+      &-text {
+          color: var(--dark-gray);
+          font-size: 1.6rem;
+          margin-top: 0;
+          margin-bottom: 2rem;
+      }
+
+  }
+
+  &-footer {
+      display: flex;
+      justify-content: space-around;
+
+      &-social {
+          text-align: center;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+
+          p {
+              letter-spacing: 1px;
+          }
+
+      }
+
+  }
+
+}
